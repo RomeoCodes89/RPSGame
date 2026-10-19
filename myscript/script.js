@@ -54,7 +54,7 @@ function playGame () {
     console.log("Let the 5 round Game begin!");
     
     // Loops to play 5 rounds of the game
-    for (let i = 1; i < 5; i++) {
+    for (let i = 1; i <= 5; i++) {
         console.log(`Round ${i}`);
 
         const roundWinner = playRound();
