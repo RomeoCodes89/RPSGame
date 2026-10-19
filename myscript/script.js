@@ -38,3 +38,32 @@ function getGameWinner (humanChoice, computerChoice) {
 
 console.log(getGameWinner("rock", "scissors"));
 
+// function to play each round
+function playRound () {
+    const humanChoice = getHumanChoice();
+    const computerChoice = getComputerChoice();
+
+    return getGameWinner(humanChoice, computerChoice);
+}
+
+//function for playing the game
+function playGame () {
+    let humanScore = 0;
+    let computerScore = 0;
+
+    console.log("Let the 5 round Game begin!");
+    
+    // Loops to play 5 rounds of the game
+    for (let i = 1; i < 5; i++) {
+        console.log(`Round ${i}`);
+
+        const roundWinner = playRound();
+
+        // Score update after each round played
+
+        if (roundWinner === "human") {
+            humanScore++;
+        } else if (roundWinner === "computer") {
+            computerScore++;
+        }
+    }
