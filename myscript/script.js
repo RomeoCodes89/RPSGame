@@ -16,4 +16,25 @@ function getHumanChoice () {
     return humanChoice.toLowerCase();
 }
 
-//console.log(getHumanChoice());
+console.log(getHumanChoice());
+
+// function to determine the winner
+function getGameWinner (humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+
+        return alert("You chose " + humanChoice + "and the computer chose " + computerChoice + "So. It's a tie!");
+    } else if (
+        (humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "paper" && computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice === "paper")
+    ) {
+        alert("You chose " + humanChoice + " and the computer chose " + computerChoice + ". You win!");
+        return "human";
+    } else {
+        alert("You chose " + humanChoice + " and the computer chose " + computerChoice + ". Computer wins!");
+        return "computer";
+    }
+}
+
+console.log(getGameWinner("rock", "scissors"));
+
