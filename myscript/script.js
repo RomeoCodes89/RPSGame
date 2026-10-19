@@ -67,3 +67,19 @@ function playGame () {
             computerScore++;
         }
     }
+    
+     // Scoreboard after each round played
+    console.log(`Current Score - Human: ${humanScore}, Computer: ${computerScore}`);
+
+    // Determine the overall winner for the 5 rounds.
+    if (humanScore > computerScore) {
+        console.log("Congratulations! You won the game!");
+    } else if (computerScore > humanScore) {
+        console.log("Sorry! The computer won the game!");
+    } else {
+        console.log("It's a tie game!");
+    }
+}
+
+// Execution: Start the game
+playGame();
